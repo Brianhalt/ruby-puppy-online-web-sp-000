@@ -4,7 +4,7 @@ class Dog
 
   attr_accessor :name
 
-  def clear_all
+  def self.clear_all
     @@all.clear
   end
 
@@ -15,6 +15,9 @@ class Dog
   end
 
   def self.all
-    @@all
+    @@all.each do |dog|
+      puts dog.name
+    end
   end
+
 end
